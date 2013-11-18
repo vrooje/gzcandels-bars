@@ -1,0 +1,344 @@
+\documentclass[useAMS,usenatbib]{mn2e}
+%\documentclass[twocolumn]{emulateapj}
+\usepackage{graphicx,natbib,color,multirow,amsmath}
+\voffset=-0.8in
+
+\definecolor{titlecol}{rgb}{0,0,1}
+\definecolor{titlecol2}{rgb}{0,0.65,0}
+
+%\definecolor{titledark}{rgb}{0,0,0.8}
+%\definecolor{hilit}{rgb}{0,0,1}
+%\definecolor{hilitdark}{rgb}{0,0,0.8}
+%\font\sbf=cmssbx10 at 32.28pt %big font for headers
+
+\font\nbf=cmssbx10 at 12.28pt %big font for headers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% If you want to leave notes in the text feel free to define
+%%%% your own colour above and a style below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\note		{\color{titlecol2} \nbf}
+\def\noteb		{\color{titlecol} \nbf}
+\def\notebsm	{\color{titlecol}}
+\def\notec		{\color{titlecol2} \nbf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For the eventual referee response
+\def\changed    {\color{titlecol} }
+%\def\changed    {}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Other stuff I use a lot
+\def\oiii		{$\mathrm{\left[ O \textsc{iii}\right] }$}
+\def\moiii		{\mathrm{\left[ O \textsc{iii}\right] }}
+\def\nii		{$\mathrm{\left[ N \textsc{ii}\right] }$}
+\def\mnii		{\mathrm{\left[ N \textsc{ii}\right] }}
+\def\sii		{$\mathrm{\left[ S \textsc{ii}\right] }$}
+\def\msii		{\mathrm{\left[ S \textsc{ii}\right] }}
+\def\galfit     {{\tt GALFIT}}
+
+\def\mmsun	{\rm{M}_{\odot}}
+\def\fnobulge    {$f_{\rm no~bulge}$}
+\def\mfnobulge {f_{\rm no~bulge}}
+\def\fedgeon     {$f_{\rm edge-on}$}
+\def\mfedgeon  {f_{\rm edge-on}}
+\def\fcnobulge    {$f_{\rm confirmed~no~bulge}$}
+\def\mfcnobulge {f_{\rm confirmed~no~bulge}}
+
+
+%\def\lesssim{\mathrel{\hbox{\rlap{\hbox{\lower5pt\hbox{$\sim$}}}\hbox{$<$}}}}
+%\def\gtrsim{\mathrel{\hbox{\rlap{\hbox{\lower5pt\hbox{$\sim$}}}\hbox{$>$}}}}
+%new defs of lesssim gtrsim that I think look better
+\def\lesssim{\mathrel{\hbox{\rlap{\hbox{\lower3pt\hbox{$\sim$}}}\hbox{\raise2pt\hbox{$<$}}}}}
+\def\gtrsim{\mathrel{\hbox{\rlap{\hbox{\lower3pt\hbox{$\sim$}}}\hbox{\raise2pt\hbox{$>$}}}}}
+
+
+\newcommand\nodata{ ~$\cdots$~ }
+
+
+
+
+\begin{document}
+
+\title[Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$]{Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$\thanks{This publication has been made possible by the participation of more than 200,000 volunteers in the Galaxy Zoo project.} } \author[Simmons et al.]{\parbox[t]{16cm}{Simmons, Melvin, Masters, Lintott, Keel, Willett, Rutkowski, Smethurst, Cheung, (need authors for UDS redshifts), GZ, CANDELS, et al.; name order still in flux
+\vspace{0.1in} }\\
+$^{1}$Oxford Astrophysics, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK\\
+% All or most of these will be needed later
+%$^{2}$Yale Center for Astronomy and Astrophysics, Yale University, P.O. Box 208121, New Haven, CT 06520, USA\\
+%$^{3}$Department of Astronomy, Yale University, New Haven, CT 06511, USA\\
+%$^{4}$Adler Planetarium, 1300 S. Lake Shore Drive, Chicago, IL 60605, USA\\
+%$^{5}$Department of Physics, Yale University, New Haven, CT 06511, USA\\
+%$^{6}$Astronomy Department, Wesleyan University, Middletown, CT 06459, USA\\
+%$^{7}$Blackett Laboratory, Imperial College London, London SW7 2AZ, UK\\
+%$^{8}$Institute of Cosmology \& Gravitation, University of Portsmouth, Dennis Sciama Building, Portsmouth PO1 3FX, UK\\
+%$^{9}$SEPnet,\thanks{www.sepnet.ac.uk} South East Physics Network, School of Physics \& Astronomy, University of Southampton, HighÞeld, Southampton SO17 1BJ, UK\\
+%$^{10}$School of Physics and Astronomy, University of Minnesota, 116 Church St. SE, Minneapolis, MN 55455, USA\\
+%$^{11}$Centre for Astronomy and Particle Theory, The University of Nottingham, University Park, Nottingham NG7 2RD, UK
+   }
+  
+\maketitle
+  
+\label{firstpage}
+  
+\begin{abstract}
+
+The formation of bars in disks is a tracer of the dynamical maturity of disk galaxies. At $z > 1$, it is expected that dynamically mature disks are rare. The only current simulations of the evolving bar fraction predict that the observable bar fraction drops to zero at $z > 1$. Here we report the discovery of barred structures in massive disk galaxies at $z \sim 1.5$ in deep rest-frame optical images from CANDELS. From within a sample of 876 disk galaxies identified by visual classification in Galaxy Zoo, we identify 123 barred galaxies (a fraction $f_{bar} = 14\%$). Selecting
+a sub-sample within the same region (brighter than $ L^*$) of the evolving galaxy luminosity function, 
+%a volume-limited sub-sample 
+which allows for more direct comparison to previous studies and alleviates possible bias effects due to surface brightness dimming, we find that the bar fraction does not evolve across the redshift range $0.5 \leq z \leq 2$. We discuss the implications of this discovery in the context of existing simulations and our current understanding of the way disk galaxies have evolved over the last 11 billion years.
+
+
+  \end{abstract}
+  
+  \begin{keywords}
+  
+  galaxies: bars 
+  --- 
+  galaxies: evolution
+  --- 
+  galaxies: general 
+  --- 
+  galaxies: spiral 
+  
+  \end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  
+\section{Introduction}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Because galactic stellar bars form only within dynamically cold, rotationally supported disks \citep{athanassoula05b, combes09, sellwood10,athanassoula13}, the evolution of the fraction of disk galaxies with bar features traces the overall evolution of disk galaxy dynamics. Locally, bars are present in $\sim 25 - 50\%$ of disk galaxies \citep[e.g.][]{masters11a, aguerri09}, with their abundance steadily decreasing to $\sim$10\% of disk galaxies at $z \sim 1$ \citep{sheth08, jogee, elmegreen, melvin13}. 
+
+The lower incidence of bars at higher redshifts may be in part be due to the increased incidence of mergers and galaxy interactions \citep{conselice03b, lotz11}, which disrupt and heat disks. It may also be related to the expected increase in disk gas fraction with redshift (observed indirectly via the increase in specific star formation rate to $z \sim 2$, e.g., \citeauthor{madau96} \citeyear{madau96}, \citeauthor{lilly96} \citeyear{lilly96}, and directly via {\noteb anyone? \citep{bueller?}}), a quantity with which bars are observed to be anti-correlated \citep{masters12a} in agreement with theoretical predictions \citep[][though a high gas fraction does not entirely preclude the existence of a bar; \citeauthor{nair10} \citeyear{nair10}; \citeauthor{masters12a} \citeyear{masters12a}]{friedli93, berentzen07, villavargas10, athanassoula13}. 
+
+The current theoretical understanding of bar fraction evolution suggests that disk galaxies with $z > 1$ are too dynamically hot to become unstable to bar formation (e.g., \citeauthor{kraljic12} \citeyear{kraljic12} predict no observable bars within their simulated sample at $z \sim 1.5$). Other simulations explore the impact of tidal heating and galaxy harassment, which can either inhibit bar formation \emph{or} promote it, depending on mass \citep[with higher-mass galaxies being more likely to form a long-lasting bar due to a minor merger or interaction;][]{moore96, skibba12}. Testing this requires high-resolution imaging over large areas to observe statistically significant samples with sufficient $\Delta z$ resolution to observe evolution and adequate spatial resolution to resolve galactic-scale bars in the rest-frame optical (since the detectability of bars decreases rapidly blueward of the 4000 \AA\ break).
+
+These observing requirements currently limit studies of disk populations via bar fractions to surveys with the \emph{Hubble Space Telescope (HST)}. Previous studies have used the optical cameras on \emph{HST} to examine bar fractions to $z \sim 1$. In this paper, we use Galaxy Zoo morphological classifications of galaxies imaged by the Cosmic Assembly Near-Infrared Deep Extragalactic Legacy Survey \citep[CANDELS;][]{grogin11,koekemoer11}, which uses \emph{HST's} near-infrared Wide-Field Camera 3 (WFC3) to extend the redshift range within which high-resolution rest-frame optical galaxy images are available to $z \gtrsim 2$. 
+
+In Section 2 we describe our sample selection, including a summary of Galaxy Zoo classifications of CANDELS galaxies and how disks and bars are selected. We also explore any potential biases that may affect our results. We present our results in Section 3, with a discussion including comparison to simulated predictions in Section 4, and a summary in Section 5. Throughout
+this paper we use the AB magnitude system, and where necessary we adopt a cosmology consistent with $\Lambda$CDM, having $H_{\rm 0}=70 {\rm
+km~s^{-1}}$Mpc$^{\rm -1}$, $\Omega_{\rm m}=0.3$ and $\Omega_{\rm \Lambda}=0.7$ {\noteb \citep{bennett12,planck}.}
+
+%Should make clear somewhere here that this is a first look at the GZ-CANDELS classifications.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\section{Data}\label{sec:data}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{CANDELS}\label{candelsdata}
+
+Details about CANDELS area coverages and depth; multiple parts of the sky cut down on cosmic variance and add up to significant area for a deep survey. This is not exactly cut-and-paste from other papers, but it's close, so I'll do it when I need some productive procrastination.
+
+Number of objects total above some flux limit, from which we have visual classifications from the Galaxy Zoo project.
+
+
+\subsubsection{Redshifts}\label{sec:z}
+
+Each of the fields covered by CANDELS data has considerable ancillary data from previous and ongoing work. We assemble photometric and spectroscopic redshifts from the available literature. In COSMOS, we combine spectroscopic and photometric redshifts from the zCOSMOS project \citep{refhere} with photometric redshifts from the NEWFIRM medium-band survey \citep{whitaker11}. In GOODS-South, we use the catalog of \citet{cardamone10b}, who compiled available spectroscopic redshifts from multiple sources, to which they added photometric redshifts based on deep broad- and medium-band data from MuSYC \citep{refmusyc}. In UDS, we use available spectroscopic \citep{ref1, ref2, ref3} and photometric \citep{ref1} redshifts, the latter of which make use of deep multi-wavelength coverage from UKIDSS as well as $J$ and $H$-band magnitudes from CANDELS \citep[similar to photometric redshifts calculated by, e.g.,][]{candelsphotozref}. Of the 49,555 galaxies originally included in Galaxy Zoo-CANDELS, 46,234 currently have spectroscopic (2,886) or photometric (43,348) redshifts.
+
+
+\subsection{Classifications}\label{sec:gzdata}
+
+The Galaxy Zoo project provides quantified visual classifications of galaxies by obtaining multiple independent classifications for each galaxy. Beginning in 2007, more than 1,000,000 galaxy images total from both the Sloan Digital Sky Survey and the \emph{Hubble Space Telescope} have each been classified by typically $\sim 40$ independent volunteers via a web interface\footnote{www.galaxyzoo.org}. The initial version of the project \citep{lintott08,lintott11} asked a single question per galaxy; subsequent versions have collected more detailed morphological information, including finer sub-structures of disk galaxies such as bulge strength and bars, via a tiered classification tree \citep[e.g.,][]{willett13,melvin13}. 
+
+This work uses classifications collected during the fourth release of Galaxy Zoo, specifically 49,555 images from the COSMOS, UDS and GOODS-South fields in the CANDELS survey (hereafter GZ-CANDELS). The dataset was composed of all sources having $F160W$ ($H$) apparent magnitude $< 25.5$. Initial analysis after each galaxy had received typically $\sim 20$ classifications resulted in the early retirement of 1,555 point-like sources and 11,837 faint, low-surface brightness galaxies without resolvable fine features. Although the project is still ongoing, as of the date of this analysis each of the remaining objects has received at least 40 independent classifications.
+
+The classification tree used for GZ-CANDELS first asks volunteers to choose whether a galaxy is mostly smooth, has features, or is a star/artifact. The bar classification question (``Is there a sign of a bar feature through the centre of the galaxy?'') is reached once a volunteer has chosen ``Features or Disk'' as an answer to the first question and has subsequently said the galaxy does \emph{not} have a mostly clumpy appearance, nor is it an edge-on disk. The bar vote is therefore a fourth-tier question, and the number of volunteers per galaxy who answer the question varies depending on each volunteer's answers to the earlier questions about the galaxy.
+
+\subsection{Sample Selection}\label{sec:sample}
+
+%%%%% [FIGURE: Example images] %%%%%
+\begin{figure*}
+\includegraphics[scale=1.0]{barfig_3.eps}
+\caption{
+Examples of featured galaxies in GZ-CANDELS, showing disk galaxies whose bar fraction, $f_{bar}$ were below (top row) and above (bottom row) the threshold for inclusion in the barred sub-sample. 
+}
+\label{fig:gals}
+\end{figure*}
+%%%%% END FIGURE %%%%%
+
+
+A full reduction of the GZ-CANDELS classifications, resulting in a catalog of morphological vote fractions for each galaxy, is ongoing. Here we use the raw vote fractions, which have been neither weighted nor debiased \citep[by a procedure similar to][]{willett13}. The effects of using raw versus the reduced classifications are twofold. First, the unweighted vote fractions are likely biased in the first question toward an excess of votes for ``Star or Artifact''. Second, the effects of surface brightness dimming are not accounted for in the vote fractions, which is potentially a significant effect in a sample extending to $z \sim 2$ in the rest-frame optical.
+
+To minimize the impact of the lack of user weighting, we employ a lower vote fraction threshold when selecting ``featured'' galaxies compared to thresholds using weighted data. We select as ``featured'' galaxies those where at least 30\% of votes (out of at least 30 volunteers total) were registered for ``Features or Disk''. This selects 2,706 featured galaxies. After the first question, the user weighting used by previous Galaxy Zoo data reductions affects vote fractions by typically no more than a few percent; we therefore expect the lack of weighting to have little to no systematic effect on additional vote fractions. 
+
+Subsequent to the featured galaxy selection, we select a sub-sample where at least 30\% of volunteers (of at least 10 who answered the question) registered a vote for ``no'' to the question ``Does the galaxy have a mostly clumpy appearance?'' in order to remove galaxies whose features do not clearly include a disk; this selection removes 729 clumpy galaxies in total. We include this selection in order to consider each branch of the classification tree that leads to the bar-feature question, but note that, were we to ignore the clump-threshold criterion completely, this would only cause contamination of the final ``featured'' sample at the 1\% level; our qualitative results are not sensitive to the specific choice of clumpy threshold between $0.1 \leq f_{\mathrm not-clumpy} \leq 0.6$.
+
+Further, we also require that 50\% of volunteers (of at least 10) registered a vote for not-edge-on. 
+%Of the 876 galaxies in this sample of featured disk galaxies with inclination angles from oblique to face-on, 106 also have a bar vote fraction of at least 50\% (from at least 10 volunteers). 
+This selects a sample of 876 featured disk galaxies from which a bar may be identified, if it exists. However, approximately 20\% of these galaxies received less than 10 raw votes \emph{total} for the question ``Is there any sign of a bar feature through the centre of the galaxy?'', a consequence of the broad initial selection of featured galaxies and the multiply-branched nature of the classification tree. Because of the lower number of votes per galaxy in the 4th tier of the classification tree (the position of the bar question), within the featured sample the raw bar fractional vote is statistically useful, but uncertain for individual galaxies.
+
+We therefore elected to use internal visual classifications from the Galaxy Zoo science team to select the sub-sample of barred disk galaxies. Eight of the authors inspected each of the 876 featured disk galaxies for evidence of a bar; these votes were unanimous approximately 60\% of the time, for either a bar feature (23 galaxies) or no bar (512 galaxies). Following vote fraction thresholds used in previous studies \citep{masters12a, melvin13}, we mark a galaxy as barred if at least half of classifiers indicated the presence of a bar. 
+%We also note that this vote fraction threshold is statistically identical to a vote threshold of 45\% among volunteer votes (123 barred galaxies from science team votes vs. 121 from raw volunteer votes), but the overlap is only approximately 70\%.
+%
+The absolute $H$-band magnitudes of these galaxies are plotted as a function of redshift in Figure \ref{fig:mag_z}. Of the featured not-edge-on (and barred) galaxies, 525 (61) have redshifts between $0.5 \leq z \leq 2.0$. Within this redshift range, all flux collected by the WFC3 $H$ band is redward of the 4000-\AA\ break. Examples of barred and unbarred galaxies are shown in Figure \ref{fig:gals}.
+
+To minimize the biasing caused by surface-brightness dimming at higher redshifts, we additionally employ a conservative luminosity cut when examining bar fractions, choosing a minimum $H$ absolute magnitude of $-23.15$ at $z = 2$ (or approximately an apparent $H= 23.5$). This ensures that featured galaxies can be detected within the sub-sample at all $z < 2$. We note that this is brighter than the knee of the rest-frame-$V$-band luminosity function at this redshift \citep{marchesini12}. In order to examine similar populations across our entire redshift range, we choose a varying luminosity cut based on selecting the same region of the evolving luminosity function \citep[corrected to observed $H$ band;][]{blantonkcorrect,marchesini12}: this selection is shown as a parallelogram shape in Figure \ref{fig:mag_z}. This final cut produces 370 featured, not-edge-on galaxies, of which 56 have strong bar signatures. We note that our results are robust to small variations in the redshift and luminosity thresholds chosen for the sample.
+% Note the high-L cut also helps avoid issues caused by the significant variations in completeness with magnitude across the various CANDELS fields, and even within individual CANDELS fields (e.g. GOODS-S has ERS, wide and deep). 
+
+
+%%%%% [FIGURE: Volume-limited sample] %%%%%
+\begin{figure}
+\includegraphics[scale=0.41]{Mag_z_lowres.eps}
+\caption{
+Absolute $H$-band magnitude versus redshift for all sources (gray/black circles), 876 ``Featured'' not-edge-on disks (blue triangles), of which 123 galaxies show clear evidence of a bar (green squares). To facilitate comparison between lookback times, avoid biases due to surface-brightness dimming when calculating bar fractions, and ensure all observed $H$-band flux is redward of the 4000-\AA\ break, we select sub-samples within the same region of the evolving galaxy luminosity function \citep{marchesiniwhen} and $0.5 \leq z \leq 2$ (parallelogram). Within this region there are 370 not-edge-on disk galaxies, 56 of which have clear evidence of bars.
+}
+\label{fig:mag_z}
+\end{figure}
+%%%%% END FIGURE %%%%%
+
+
+
+
+
+\subsection{Possible sources of error in bar fractions}
+
+There are several potential sources of error that could affect our results. Below we address these and discuss their potential impact on the results presented here. 
+
+\begin{itemize}
+\item \emph{Missing disk galaxies:} 
+as disks with an exponential light profile fall below the noise limit more quickly as a function of redshift than more concentrated bulges, it is possible that a study could preferentially miss disks at high redshift. This motivated the conservative lower luminosity limit (Section \ref{sec:sample}). Additionally, we have chosen to sample the same part of the galaxy luminosity function (relative to the evolving knee) across our redshift range, which minimizes the loss of disk galaxies in the lower-redshift part of the sample compared to a luminosity-limited approach that samples brighter, rarer galaxies compared to the bulk of the population as the sample redshift decreases. For both of these reasons as well as the depth of the CANDELS images it is likely that the underlying sample selection does not bias against detection of disk galaxies.
+
+Additionally, our relatively broad selection of galaxies with ``Features or Disk'' within Galaxy Zoo is designed to account for the systematic downward shift of unweighted vote fractions that have not been corrected for (in particular) errant ``Star or Artifact'' selections. Accounting for this in the first morphological selection prevents it from systematically affecting the rest of the classifications, as errant selections are removed from the rest of the classification tree so do not affect further branches. We also note that the bar fraction results discussed in Section \ref{sec:results} are not strongly dependent on any choice of the vote threshold for features between $0.25 \leq f_{feat} \leq 0.5$.
+
+\item \emph{Missing bars within featured galaxies:} a bar feature creates a linear excess of surface brightness, so if disk galaxies as a whole are well detected in a rest-frame optical sample, bars are not likely to be missed. For examination of bar fractions, we have chosen the upper redshift limit of $z < 2$ specifically so that the $H$ band is fully in the rest-frame optical, redward of the 4000-\AA\ break; although some bars are detected at higher redshifts, this limit is conservative in terms of completeness for bar fraction studies.
+
+Additionally, using Galaxy Zoo classifications is demonstrably reliable for selection of specific features \citep{darg10,masters12a,skibba12,willett13,melvin13,othersmaybe}. The requirement that at least 50\% of classifiers vote for a bar feature is most closely related to what other selection methods call a \emph{strong} bar \citep{thismaynotbethecasebettercheck,na10}; weaker bars may be present in the sample, and statistically speaking the bar vote fraction tracks bar strength, even among ``experts'' -- but, of course, contamination becomes an issue for lower thresholds. By using expert follow-up classifications we minimize contamination in the higher-tiered branch of the question tree currently affected by low-number statistics and the compounded effects of lack of classification weighting and debiasing, and we have chosen a vote threshold to provide a roughly similar selection to other studies for ease of comparison. However, we note that there may be weaker bar instabilities present but not included in our barred sample.
+
+\item \emph{Redshift errors:} The majority of redshifts in our sample are photometric, not spectroscopic, which has the advantage of being complete even for high-redshift samples where emission lines are difficult to detect in spectra, but redshift biases are a concern. However, a simple monte carlo approach varying the photometric redshifts within their reported uncertainties does not affect the statistical results in the sample ({\noteb she says confidently, not having actually done that yet}). In part, this is because many of the photometric redshifts are based on medium-band photometry \citep[][]{cardamone09,whitaker11,someoneelseicantremember}, which is very reliable ({\noteb some stats here}).
+
+\item {\noteb \emph{Others?}}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\section{Results: Bar fractions}\label{sec:results}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Within the subset of galaxies where we can reliably detect morphological features in the rest-frame optical, the fraction of galaxies with bars is between 15 and 20\%, independent of any reasonable selection on luminosity ranges or vote fractions for detected features, lack of clumpiness, disk inclination angle, and strong bar features.
+
+Figure \ref{fig:barfrac} shows the bar fraction with lookback time, from $t_{lb} = 5.0$~Gyr ($z = 0.5$) to 10.2~Gyr ($z=2.0$). Within the sample, selected to examine the same section of the galaxy luminosity function relative to the evolving $L^*$, the bar fraction is consistent with being flat. 
+
+What else is it worth talking about here? Bar strengths? Not sure how much we can really see there.
+
+
+%%%%% [FIGURE: Bar fractions and mags of sample] %%%%%
+\begin{figure}
+\includegraphics[scale=0.425]{barfrac_Mag_t.eps}
+\caption{
+\emph{Top panel:} Bar fraction versus lookback time. Uncertainties are binomial error bars; within these uncertainties, the bar fraction is consistent with no evolution from $0.5 \leq z \leq 2$. We note that the fraction in the lowest-redshift bin is consistent with that of Melvin et al. (2013) and \citet{sheth08}. \emph{Bottom panel:} absolute $H$-band magnitudes of the sample from which the fractions are drawn.
+}
+\label{fig:barfrac}
+\end{figure}
+%%%%% END FIGURE %%%%%
+
+Say a bit more about what this means generally in terms of disk dynamics and the stability of disks at $z > 1$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\section{Comparison With Simulations}\label{sec:simulations}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%% [FIGURE: These results in context] %%%%%
+\begin{figure}
+\includegraphics[scale=0.425]{barz_simaxes.eps}
+\caption{
+Bar fraction versus redshift placing the results in this work in the context of other work. \citet{kraljic12} computed the fraction of observable bars to $z=2$ among disk galaxies that evolved to stellar masses $M_\ast \approx 10^{10-11} \mmsun $ (shaded region). Bars in higher-mass disks such as those in this sample (black circles) are predicted to be rare and weak.  Bar fractions in this work at $z < 1$ are generally consistent with those of \citet{sheth08} (green squares) and \citet{melvin13} (purple triangles) despite different samples and selection methods. Uncertainties in observed and predicted fractions were calculated assuming binomial statistics.
+}
+\label{fig:barfrac}
+\end{figure}
+%%%%% END FIGURE %%%%%
+
+
+Bar fractions are supposed to go to zero by $z \sim 1-2$, but they clearly don't. 
+
+However, the only complete simulations of the bar fraction of a population of disk galaxies done to date was limited to a small number of galaxies, and a direct comparison to this work is difficult because the galaxy masses/luminosities were lower than those here. That study makes no quantitative predictions about the dynamical maturity of massive disk galaxies.
+
+FIGURE: Kraljic et al. predictions and how we compare.
+
+However, according to the qualitative results of the simulations, bars are not supposed to form at $z \gtrsim 1$ because the disks are kept so dynamically hot that a bar instability never forms. How do you keep the disks prone to bar instabilities only 3 Gyr after the Big Bang when most galaxies are still assembling?
+
+One possibility is that bar instabilities may be triggered not by a small perturbation to a cold disk, but by a larger perturbation -- such as an interaction with another galaxy -- to a dynamically hotter disk. (Still to do: examine $z > 1$ galaxies vs $z < 1$ and see if there is evidence for a significantly different incidence of mergers/interactions.)
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  
+\section{Conclusions}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Summarize exactly how much we rock.  
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\section*{Acknowledgments}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%The authors wish to thank to C. Peng for making \galfit\ publicly available, and for many enlightening discussions.  We also wish to thank R. Skibba, M. Williams, and the anonymous referee for thorough and constructive comments that helped us improve this manuscript.
+%
+The JavaScript Cosmology Calculator \citep{wright06} and TOPCAT \citep{taylor05} were used while preparing this paper. 
+%
+BDS acknowledges support from the Oxford Martin School and Worcester College, Oxford.
+%
+\textbf{Please send your grant acknowledgments at your earliest convenience.}
+%
+% Old acknowledgments:
+%Support for the work of KS was provided by NASA through Einstein Postdoctoral Fellowship grant number PF9-00069, issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of NASA under contract NAS8-03060.
+%
+%ECM acknowledges support from the National Science Foundation through grant AST-0909063.
+%
+%SK acknowledges fellowships from the 1851 Royal Commission, Imperial College London, Worcester College, Oxford and support from the BIPAC institute at Oxford.
+%
+%KLM acknowledges funding from The Leverhulme Trust as a 2010 Early Career Fellow.
+%
+%SPB acknowledges receipt of an STFC Advanced Fellowship.
+%
+%RCN acknowledges STFC Rolling Grant ST/I001204/1 to ICG for ÔSurvey Cosmology and AstrophysicsÕ. 
+
+Galaxy Zoo was supported by The Leverhulme Trust. 
+
+%%%%%%%% CANDELS ACKNOWLEDGMENT
+
+%This publication makes use of data products from the Wide-field Infrared Survey Explorer, which is a joint project of the University of California, Los Angeles, and the Jet Propulsion Laboratory/California Institute of Technology, funded by the National Aeronautics and Space Administration.
+
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/.
+
+The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, Yale University and the University of Washington. 
+  
+\bibliographystyle{mn2e}
+\bibliography{refs}  
+
+  
+\end{document}
+  
