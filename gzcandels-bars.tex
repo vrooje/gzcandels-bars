@@ -61,7 +61,7 @@
 
 \begin{document}
 
-\title[Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$]{Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$\thanks{This publication has been made possible by the participation of more than 200,000 volunteers in the Galaxy Zoo project.} } \author[Simmons et al.]{\parbox[t]{16cm}{Simmons, Melvin, Masters, Lintott, Keel, Willett, Rutkowski, Smethurst, Cheung, (need authors for UDS redshifts), GZ, CANDELS, et al.; name order still in flux
+\title[Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$]{Galaxy Zoo-CANDELS : Bar Fractions from $0.5 < z < 2$\thanks{This publication has been made possible by the participation of more than 200,000 volunteers in the Galaxy Zoo project.} } \author[Simmons et al.]{\parbox[t]{16cm}{Simmons, Melvin, Lintott, Masters, Keel, Willett, Rutkowski, Schawinski, Smethurst, Cheung, (need authors for UDS redshifts), GZ, CANDELS, et al.; name order still in flux
 \vspace{0.1in} }\\
 $^{1}$Oxford Astrophysics, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK\\
 % All or most of these will be needed later
@@ -145,7 +145,7 @@ The Cosmic Assembly Near-infrared Extragalactic Legacy Survey \citep[CANDELS;][]
 
 %Details about CANDELS area coverages and depth; multiple parts of the sky cut down on cosmic variance and add up to significant area for a deep survey. This is not exactly cut-and-paste from other papers, but it's close, so I'll do it when I need some productive procrastination.
 
-Here we use the CANDELS ACS and WFC3 images from within the COSMOS, GOODS-South, and UDS fields, for which raw classifications from the Galaxy Zoo project are presently available. The WFC3/IR observations of these fields cover approximately 0.3 square degrees combined. The Galaxy Zoo classifications are based on color images of 49,555 sources, created using an asinh stretch \citep{lupton04} with WFC3 F160W, F125W, and ACS F814W as red, green and blue respectively. 
+Here we use the CANDELS ACS and WFC3 images from within the COSMOS, GOODS-South, and UDS fields, for which raw classifications from the Galaxy Zoo project are presently available. The WFC3/IR observations of these fields cover approximately 0.3 square degrees combined. The Galaxy Zoo classifications are based on colour images of 49,555 sources, created using an asinh stretch \citep{lupton04} with WFC3 F160W, F125W, and ACS F814W as red, green and blue respectively. 
 
 
 \subsection{Classifications}\label{sec:gzdata}
@@ -157,9 +157,23 @@ This work uses classifications collected during the fourth release of Galaxy Zoo
 The classification tree used for GZ-CANDELS first asks volunteers to choose whether a galaxy is mostly smooth, has features, or is a star/artifact. The bar classification question (``Is there a sign of a bar feature through the centre of the galaxy?'') is reached once a volunteer has chosen ``Features or Disk'' as an answer to the first question and has subsequently said the galaxy does \emph{not} have a mostly clumpy appearance, nor is it an edge-on disk. The bar vote is therefore a fourth-tier question, and the number of volunteers per galaxy who answer the question varies depending on each volunteer's answers to the earlier questions about the galaxy.
 
 
+
+
+%%%%% [FIGURE: Bar fractions and mags of sample] %%%%%
+\begin{figure}
+\includegraphics[scale=0.275]{selection_path_visual.eps}
+\caption{
+Selection of the featured, not-edge-on disk galaxy sample (876 galaxies) in Galaxy Zoo-CANDELS, using three nested questions in the Galaxy Zoo classification tree. This selection was made independently of restrictions on redshift or luminosity (a full description of the sample selection is described in Section \ref{sec:sample}). Eight independent classifiers subsequently examined each of the 876 disk galaxies for evidence of a bar. 
+}
+\label{fig:sampleselection}
+\end{figure}
+%%%%% END FIGURE %%%%%
+
+
 \subsection{Redshifts}\label{sec:z}
 
 Each of the fields covered by CANDELS data has considerable ancillary data from previous and ongoing work. We assemble photometric and spectroscopic redshifts from the available literature. In COSMOS, we combine spectroscopic and photometric redshifts from the zCOSMOS project \citep{refhere} with photometric redshifts from the NEWFIRM medium-band survey \citep{whitaker11}. In GOODS-South, we use the catalog of \citet{cardamone10b}, who compiled available spectroscopic redshifts from multiple sources, to which they added photometric redshifts based on deep broad- and medium-band data from MuSYC \citep{gawiser06}. In UDS, we use available spectroscopic \citep{ref1, ref2, ref3} and photometric \citep{ref1} redshifts, the latter of which make use of deep multi-wavelength coverage from UKIDSS as well as $J$ and $H$-band magnitudes from CANDELS \citep[similar to photometric redshifts calculated by, e.g.,][]{candelsphotozref}. Of the 49,555 galaxies originally included in Galaxy Zoo-CANDELS, 46,234 currently have spectroscopic (2,886) or photometric (43,348) redshifts.
+
 
 
 
@@ -198,7 +212,7 @@ Absolute $H$-band magnitude versus redshift for all sources (gray/black circles)
 
 Further, we also require that 50\% of volunteers (of at least 10) registered a vote for not-edge-on. 
 %Of the 876 galaxies in this sample of featured disk galaxies with inclination angles from oblique to face-on, 106 also have a bar vote fraction of at least 50\% (from at least 10 volunteers). 
-This selects a sample of 876 featured disk galaxies from which a bar may be identified, if it exists. However, approximately 20\% of these galaxies received less than 10 raw votes \emph{total} for the question ``Is there any sign of a bar feature through the centre of the galaxy?'', a consequence of the broad initial selection of featured galaxies and the multiply-branched nature of the classification tree. Because of the lower number of votes per galaxy in the 4th tier of the classification tree (the position of the bar question), within the featured sample the raw bar fractional vote is statistically useful, but uncertain for individual galaxies.
+This selects a sample of 876 featured disk galaxies from which a bar may be identified, if it exists. Figure \ref{fig:sampleselection} shows a visual representation of this sample selection, from which a further sub-sample of barred galaxies may be identified. However, approximately 20\% of these 876 galaxies received less than 10 raw votes \emph{total} for the question ``Is there any sign of a bar feature through the centre of the galaxy?'', a consequence of the broad initial selection of featured galaxies and the multiply-branched nature of the classification tree. Because of the lower number of votes per galaxy in the 4th tier of the classification tree (the position of the bar question), within the featured sample the raw bar fractional vote is statistically useful, but uncertain for individual galaxies.
 
 We therefore elected to use internal visual classifications from the Galaxy Zoo science team to select the sub-sample of barred disk galaxies. Eight of the authors inspected each of the 876 featured disk galaxies for evidence of a bar; these votes were unanimous approximately 60\% of the time, for either a bar feature (23 galaxies) or no bar (512 galaxies). Following vote fraction thresholds used in previous studies \citep{masters11a, melvin13}, we mark a galaxy as barred if at least half of classifiers indicated the presence of a bar. 
 %We also note that this vote fraction threshold is statistically identical to a vote threshold of 45\% among volunteer votes (123 barred galaxies from science team votes vs. 121 from raw volunteer votes), but the overlap is only approximately 70\%.
@@ -266,7 +280,7 @@ The incidence of bars among massive disks may be due at least in part to galaxy 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  
-\section{Conclusions}
+\section{Summary}
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -275,7 +289,7 @@ Using visual classifications of rest-frame optical \emph{HST} galaxy images from
 
 At $z > 1$, the bar fraction is approximately $10-20$\% and consistent with no evolution between $1 < z < 2$. This is qualitatively consistent with the predictions of zoom-in cosmological simulations, although further work is needed to determine whether simulations of disk galaxies with $L > L^*$ predict the same quantitative strong bar fraction at $z < 2$. 
 
-Final pithy statement about how super-important bars are as tracers of disk evolution and how promising this future is.... possibly something about how much more we might expect to do once the classifications are done for all the CANDELS fields.
+That the bar fraction from $1 < z < 2$ appears to be small but constant among massive disk galaxies implies that massive disk dynamics do not rapidly change on average over this period. Further clarification may come in the future when additional detailed morphological classifications of deep $z \sim 2$ rest-frame optical galaxy images are available; additional simulations will help provide a more nuanced understanding of the underlying physical causes of this apparently stable bar fraction. 
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -287,9 +301,11 @@ Final pithy statement about how super-important bars are as tracers of disk evol
 
 %The authors wish to thank to C. Peng for making \galfit\ publicly available, and for many enlightening discussions.  We also wish to thank R. Skibba, M. Williams, and the anonymous referee for thorough and constructive comments that helped us improve this manuscript.
 %
-The JavaScript Cosmology Calculator \citep{wright06} and TOPCAT \citep{taylor05} were used while preparing this paper. 
+TOPCAT \citep{taylor05} and an OS X widget form of the JavaScript Cosmology Calculator \citep{wright06} were used while preparing this paper. 
 %
-BDS acknowledges support from the Oxford Martin School and Worcester College, Oxford.
+BDS acknowledges support from the Oxford Martin School, Worcester College and Balliol College, Oxford.
+%
+KS gratefully acknowledges support from Swiss National Science Foundation Grant PP00P2\_138979/1. 
 %
 \textbf{Please send your grant acknowledgments at your earliest convenience.}
 %
