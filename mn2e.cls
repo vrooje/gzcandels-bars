@@ -1510,7 +1510,7 @@ to \linewidth\bgroup\@eqnsel\hskip\@centering$\displaystyle\tabskip\z@
 \frenchspacing
 
 % HACKED by Brooke because WHY the hell doesn't this file already support standard BibTeX journal commands?
-% this is from emulateapj.cls
+% this is from emulateapj.cls -- later added PASA
 
 \let\jnl@style=\rmfamily 
 \def\ref@jnl#1{{\jnl@style#1}}% 
@@ -1558,6 +1558,8 @@ to \linewidth\bgroup\@eqnsel\hskip\@centering$\displaystyle\tabskip\z@
           % Physical Review E 
 \newcommand\prl{\ref@jnl{Phys.~Rev.~Lett.}}% 
           % Physical Review Letters 
+\newcommand\pasa{\ref@jnl{PASA}}% 
+          % Publications of the Astronomical Society of Australia 
 \newcommand\pasp{\ref@jnl{PASP}}% 
           % Publications of the ASP 
 \newcommand\pasj{\ref@jnl{PASJ}}% 
