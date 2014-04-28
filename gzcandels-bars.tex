@@ -89,7 +89,7 @@ Robert C. Nichol$^{X}$,
 %% Jeyhan made the color images for GZ
 Jeyhan Kartaltepe$^{X}$,
 %% Conselice, Mortlock, Hartley, Almaini are citations for inclusion of unpublished UDS specz and photoz data
-%% Others are builders in CANDELS or were on telecons or sent comments to me
+%% Others are core/data builders in CANDELS or were on telecons or sent comments to me
 Christopher Conselice$^{X}$,
 Alice Mortlock$^{X}$, 
 William Hartley$^{X}$,
@@ -98,14 +98,18 @@ Eric Bell$^{X}$,
 Kevin R. V. Casteels$^{X}$, 
 Sandy Faber$^{X}$,
 Harry Ferguson$^{X}$,
+Adriano Fontana,$^{X}$,
 Lucy Fortson$^{4}$, 
+Audrey Galametz,$^{X}$,
 Norman Grogin$^{X}$,
+Yicheng Guo$^{X}$,
 Boris Haeussler$^{X}$,
 Dale Kocevski$^{X}$,
 Anton Koekemoer$^{X}$,
 Ray Lucas$^{X}$,
 Dan McIntosh$^{X}$,
 Jeff Newman$^{X}$,
+Michael Peth$^{X}$,
 %% CANDELS is not automatically below GZ but I haven't actually had any comments from anyone on that team yet
 {\notebsm [CANDELS - please double check I haven't excluded anyone + adjust your name format as necessary]}, 
 names/order still in flux
@@ -247,7 +251,7 @@ A full reduction of the GZ-CANDELS classifications, resulting in a catalog of mo
 To favour completeness in the final disk galaxy sample and to minimize the impact of the lack of user weighting, we employ a lower vote percentage threshold when selecting ``featured'' galaxies compared to thresholds using weighted data. We select as ``featured'' galaxies those where at least 30\% of votes (out of at least 30 volunteers total) were registered for ``Features or Disk''. This selects 2,706 featured galaxies. After the first question, the user weighting used by previous Galaxy Zoo data reductions affects vote percentages by typically no more than a few percent; we therefore expect the lack of weighting to have little to no systematic effect on additional vote percentages. 
 %{\notek I hope that's true, but it really hasn't been shown explicitly. Something for BDS, KW, SB et al. to work on.} {\notebsm I looked at this in some detail when I started playing with GZH results. Once you get past the first question the difference in any given vote percentage between using weighted and unweighted is typically less than $\sim 3$\%.}
 
-Subsequent to the featured galaxy selection, we select a sub-sample where at least 30\% of volunteers (where a minimum of 10 answered the question) registered a vote for ``no'' to the question ``Does the galaxy have a mostly clumpy appearance?'' in order to remove galaxies whose features do not clearly include a disk; this selection removes 729 clumpy galaxies in total. We include this selection in order to consider each branch of the classification tree that leads to the bar-feature question; however, we note that were we to ignore the clump-threshold criterion completely, this would only cause contamination of the final ``featured'' sample at the 1\% level. Our qualitative results are thus not sensitive to the specific choice of clumpy threshold between $0.1 \leq p_{\mathrm not-clumpy} \leq 0.6$.
+Subsequent to the featured galaxy selection, we select a sub-sample where at least 30\% of volunteers (where a minimum of 10 answered the question) registered a vote for ``no'' to the question ``Does the galaxy have a mostly clumpy appearance?'' in order to remove galaxies whose features do not clearly include a disk; this selection removes 729 clumpy galaxies in total. We include this selection in order to consider each branch of the classification tree that leads to the bar-feature question; however, we note that were we to ignore the clump-threshold criterion completely, this would only cause contamination of the final ``featured'' sample at the 1\% level, due to the subsequent selection criteria. Our qualitative results are thus not sensitive to the specific choice of clumpy threshold between $0.1 \leq p_{\mathrm not-clumpy} \leq 0.6$.
 
 %%%%% [FIGURE: Volume-limited sample] %%%%%
 \begin{figure}
@@ -270,7 +274,7 @@ We therefore elected to supplement the volunteer data with visual classification
 
 The absolute $H$-band magnitudes in the sample are plotted as a function of redshift in Figure \ref{fig:mag_z}. Of the featured not-edge-on (and barred) galaxies, 525 (61) have redshifts between $0.5 \leq z \leq 2.0$. Within this redshift range, all flux collected by the WFC3 $H$ band is redward of the 4000-\AA\ break. Examples of barred and unbarred galaxies are shown in Figure \ref{fig:gals}.
 
-To minimize any bias caused by surface-brightness dimming at higher redshifts, we additionally employ a conservative luminosity cut when examining bar fractions, choosing a minimum $H$ absolute magnitude of $-23.15$ at $z = 2$ (or approximately an apparent $H= 23.5$). This ensures that featured galaxies can be detected within the sub-sample at all $z < 2$. We note that this is brighter than the knee of the rest-frame-$V$-band luminosity function at this redshift \citep{marchesini12}. In order to examine similar populations across our entire redshift range, we use a varying luminosity cut based on selecting the same region of the evolving luminosity function \citep[corrected to observed $H$ band;][]{blanton07,marchesini12}: this selection is shown as a parallelogram shape in Figure \ref{fig:mag_z}. This final cut produces 370 featured, not-edge-on disk galaxies, of which 56 have strong bar signatures. We note that our results are robust to small variations in the redshift and luminosity thresholds chosen for the sample.
+To minimize any bias caused by surface-brightness dimming at higher redshifts, we additionally employ a conservative luminosity cut when examining bar fractions, choosing a minimum $H$ absolute magnitude of $-23.15$ at $z = 2$ (or approximately an apparent $H= 23.5$). This ensures that featured galaxies can be detected within the sub-sample at all $z < 2$. We note that this is brighter than the knee of the rest-frame-$V$-band luminosity function at this redshift \citep{marchesini12}. In order to examine similar populations across our entire redshift range, we use a varying luminosity cut based on selecting the same region of the evolving luminosity function \citep[corrected to observed $H$ band;][]{blanton07,marchesini12}: this selection is shown as a parallelogram shape in Figure \ref{fig:mag_z}. This final cut produces 370 featured, not-edge-on disk galaxies, of which 56 have strong bar signatures. We note that our results are robust to small variations in the redshift and luminosity thresholds chosen for the sample. For example, our qualitative result does not change if we use a fixed luminosity/stellar mass range.
 % Note the high-L cut also helps avoid issues caused by the significant variations in completeness with magnitude across the various CANDELS fields, and even within individual CANDELS fields (e.g. GOODS-S has ERS, wide and deep). 
 
 \subsubsection{Completeness corrections}\label{sec:completeness}
@@ -332,7 +336,7 @@ are generally too dynamically hot to become unstable to bar formation; this mani
 We also note that the galaxy masses and luminosities used in the simulations were on average lower %{\notek (How much?)} 
 than those examined in this work, making a direct comparison to this work more difficult, as bar fraction also depends on stellar mass \citep{sheth08,melvin14}. \citeauthor{kraljic12} predict that massive disk galaxies will be more likely to form bars at higher redshift than lower mass disk galaxies due to higher-mass galaxies reaching dynamical maturity at earlier epochs. This is qualitatively consistent with our finding that the bar fraction at $z \sim 2$ may be as high as $12\%$ within $2 \sigma$ binomial uncertainties, but a direct and quantitative theoretical comparison to our observational result is currently not possible given available simulations. New simulations encompassing galaxies with higher stellar masses would help to advance this field further.
 
-Our results agree with previous work that the epoch of bar formation in the disk galaxy population begins at $z < 1$. However, bars are not completely absent even at $z \sim 2$: some disks at the masses probed by our sample are mature enough even by this epoch ($\sim 3-4$ Gyr after the Big Bang) to host a bar. 
+Our results agree with previous work that the main epoch of bar formation in the disk galaxy population begins at $z < 1$. However, bars are not completely absent even at $z \sim 2$: some disks at the masses probed by our sample are mature enough even by this epoch ($\sim 3-4$ Gyr after the Big Bang) to host a bar. 
 
 Whether the bar features are analogous to long-lived bars in dynamically cold disks at lower redshift or are shorter-lived features triggered within dynamically warmer disks is unclear from examination of bar fractions alone. Examination of individual simulated galaxies by \citeauthor{kraljic12} indicates that bars formed at $z > 1.5$ tend to undergo shorter cycles of formation and destruction., and there is some evidence that short-lived grand design spiral features more commonly associated with mature disks can be triggered by interactions at $z > 2$ \citep{law12}.
 
